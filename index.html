@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(background.png);
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+    posoiton: relative;
+}
+
+.logo {
+    width: 120px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.content {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.content h1 span {
+    color: #ff3756;
+}
+
+.content button {
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 12px 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.content button img {
+    width: 15px;
+    margin-left: 10px;
+}
+
+.launch-time {
+    display: flex;
+}
+
+.launch-time div {
+    flex-basis: 100px;
+}
+
+.launch-time div p {
+    font-size: 60px;
+    margin-bottom: -14px;
+}
+
+.rocket {
+    width: 250px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: rocket 4s linear infinite;
+}
+
+@keyframes rocket {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 105%;
+        opacity: 1;
+    }
+}
+</style>
+
+<body>
+    <div class="container">
+        <img src="https://img1.wsimg.com/isteam/ip/5347598b-e052-4123-9c3b-e542f646b6b4/Kneogin%20Igmisarch%20Logo.jpg/:/rs=w:180,h:180,m" class="logo">
+        <div class="content">
+            <p> Website is Under development </p>
+            <h1> Website will be <span>LAUNCHING live soon<span></h1>
+            <div class="launch-time">
+                <div>
+                    <p id="days"> 00</p>
+                    <span>days</span>
+                </div>
+                <div>
+                    <p id="hours"> 00</p>
+                    <span>hours</span>
+                </div>
+                <div>
+                    <p id="mins"> 00</p>
+                    <span>mins</span>
+                </div>
+                <div>
+                    <p id="secs"> 00</p>
+                    <span>second</span>
+                </div>
+            </div>
+            <button type="button"> Learn More <img src="triangle.png"></button>
+        </div>
+        <img src="rocket.png" class="rocket">
+    </div>
+</body>
+<script type="text/javascript">
+var countDownDate = new Date("Oct 25,2023 00:00:00").getTime();
+var x = setInterval(function() {
+    var now = new Date();
+    var time=now.getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById('days').innerHTML=days;
+     document.getElementById('hours').innerHTML=hours;
+      document.getElementById('mins').innerHTML=minutes; 
+       document.getElementById('secs').innerHTML=seconds;
+       if(distance<0)
+       {
+       	clearInterval(x);
+       	    document.getElementById('days').innerHTML="00";
+     document.getElementById('hours').innerHTML="00";
+      document.getElementById('mins').innerHTML="00";
+       document.getElementById('secs').innerHTML="00";
+       }
+
+}, 1000);
+
+
+</script>
+
+</html>
