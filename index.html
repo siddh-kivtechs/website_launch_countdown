@@ -2,21 +2,19 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
+ 
   <title>kneo-learn &#39;s Countdown Timer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./style_countdown.css">
+<link rel="stylesheet" href="./style_audio.css">
+<div class="song">
+	
+	<div class="pause" onclick="togglePlay()">🔇</div>
+	<div class="player">
+		<audio class="audio" src="https://siddh-kivtechs.github.io/audio_library/silen_partner_remix.mp3" autoplay type="audio" loop=""></audio>
+	</div>
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-
-<!-- partial -->
-  <audio autoplay loop>
-  <source src="https://siddh-kivtechs.github.io/audio_library/silen_partner_remix.mp3" type="audio/mp3">
-</audio>
-
+</div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/luxon/3.0.3/luxon.min.js'></script>
-  <script  src="./script.js"></script>
-
-</body>
-</html>
+ <script  src="./script_countdown.js"></script>
+ <script  src="./script_audio.js"></script>

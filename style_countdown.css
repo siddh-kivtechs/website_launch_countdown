@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  background: url("https://siddh-kivtechs.github.io/image/GRIS_03_Screenshot1.jpg");
+  color: #2E294E;
+  font-family: "Poppins", sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.countdown--container {
+  position: absolute;
+  top: 50%;
+  left: 250px;
+  height: 250px;
+  width: 700px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.countdown--date-text {
+  font-size: 112px;
+  font-weight: bold;
+}
+
+.countdown--data-container {
+  display: flex;
+  justify-content: space-between;
+  width: 560px;
+  text-align: center;
+}
+
+.countdown--heading-container {
+  font-weight: bold;
+  font-size: 20px;
+}
